@@ -1,0 +1,73 @@
+.register {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rHeader {
+  height: 60px;
+  background-color: #003580;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.rHeaderContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+  border-radius: 4px;
+}
+
+.rContainer {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.rInput {
+  height: 30px;
+  padding: 10px;
+}
+
+.rButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rButton:disabled {
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+.rError {
+    color: red;
+    padding: 5px;
+    width: 100%;
+    word-wrap: break-word; /* Allows long words to break to the next line */
+    overflow: hidden; /* Ensures content doesn't overflow the container */
+    text-align: left; /* Aligns text within the container */
+    box-sizing: border-box;
+    border: 1px solid red;
+    background-color: rgb(239, 194, 194);
+    border-radius: 5px;
+}
