@@ -41,9 +41,9 @@ app.use((err, req, res, next) => {
 
 
 
+const PORT = process.env.PORT || 4000;
 
-
-app.listen(4000, () => {
+app.listen(PORT, () => {
   connect();
   console.log("i am listening for requests!!");
 });
