@@ -7,7 +7,7 @@ import Register from "./pages/register/Register";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/bookingapplication">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hotels" element={<List />} />
