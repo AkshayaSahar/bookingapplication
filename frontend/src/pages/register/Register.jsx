@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { API_BASE_URL } from '../../../src/config.js';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Register = () => {
 
   const handleClick = async () => {
     try {
-      const res = await axios.post("/api/auth/register", credentials);
+      const res = await axios.post(`${API_BASE_URL}/api/auth/register`, credentials);
       dispatch({type:"LOGIN_SUCCESS", payload: res.data});
       navigate("/");
     } catch (err) {

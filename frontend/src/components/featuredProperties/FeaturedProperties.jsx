@@ -1,9 +1,10 @@
 import "../featuredProperties/featuredProperties.css";
 import useFetch from "../../hooks/useFetch";
+import { API_BASE_URL } from "../../config.js";
 
 const FeaturedProperties = () => {
   const { data, loading, error } = useFetch(
-    "/api/hotels?featured=true&limit=4"
+    `${API_BASE_URL}/api/hotels?featured=true&limit=4`
   );
   const sampleImg = [
     "https://cdn.prod.website-files.com/63f5043a8590bf1a77215131/642d391faa79a9054efedaaf_11-p-500.webp",

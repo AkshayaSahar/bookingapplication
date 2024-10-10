@@ -17,6 +17,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext.jsx";
 import { AuthContext } from "../../context/AuthContext.jsx";
 import Reserve from "../../components/reserve/Reserve.jsx";
+import { API_BASE_URL } from "../../config.js";
 
 const Hotel = () => {
   const location = useLocation();
@@ -72,7 +73,7 @@ const Hotel = () => {
     defaultDates[0].startDate
   );
 
-  const { data, loading, error, reFetch } = useFetch(`/api/hotels/find/${id}`);
+  const { data, loading, error, reFetch } = useFetch(`${API_BASE_URL}/api/hotels/find/${id}`);
 
   const handleOpen = (i) => {
     setSlideNumber(i);

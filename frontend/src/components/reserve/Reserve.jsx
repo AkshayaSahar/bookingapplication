@@ -6,9 +6,10 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
 import axios from "axios";
+import { API_BASE_URL } from "../../config.js";
 
 const Reserve = ({ setOpen, hotelId }) => {
-  const { data, loading, error } = useFetch(`/api/hotels/room/${hotelId}`);
+  const { data, loading, error } = useFetch(`${API_BASE_URL}/api/hotels/room/${hotelId}`);
   const [selectedRooms, setSelectedRooms] = useState([]);
   const { dates } = useContext(SearchContext);
   const navigate = useNavigate();
@@ -51,7 +52,7 @@ const Reserve = ({ setOpen, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`/api/rooms/availability/${roomId}`, {
+          const res = axios.put(`${API_BASE_URL}/api/rooms/availability/${roomId}`, {
             dates: allDates,
           });
           return res.data;

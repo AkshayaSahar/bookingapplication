@@ -7,6 +7,7 @@ import FeaturedProperties from "../../components/featuredProperties/FeaturedProp
 import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 
+
 export const Home = () => {
   return (
     <div>
