@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors";
 import authRoute from "./routes/auth.js"; // put .js extension
 import usersRoute from "./routes/users.js";
 import hotelsRoute from "./routes/hotels.js";
@@ -9,6 +10,12 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
+
+const corsOptions = {
+  origin: "https://akshayasahar.github.io", 
+  credentials: true, 
+};
+app.use(cors(corsOptions));
 
 const connect = async () => {
   try {
