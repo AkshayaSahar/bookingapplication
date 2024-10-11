@@ -11,9 +11,10 @@ import cookieParser from "cookie-parser";
 const app = express();
 dotenv.config();
 
+
 const corsOptions = {
-  origin: "https://akshayasahar.github.io", 
-  credentials: true, 
+  origin: "*", 
+  credentials: true,  
 };
 app.use(cors(corsOptions));
 
