@@ -84,6 +84,3 @@ export const login = async (req, res, next) => {
     next(err);
   }
 };
-
-// login
-// if i dont give both uname , psw -> says user not found 
